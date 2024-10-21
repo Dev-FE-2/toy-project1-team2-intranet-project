@@ -1,5 +1,6 @@
 import { USER_PATH } from '../../utils/constants';
 import './Header.css';
+
 export default class Header {
   constructor(getUser) {
     const HEADER_ELEMENT = document.querySelector('.header');
