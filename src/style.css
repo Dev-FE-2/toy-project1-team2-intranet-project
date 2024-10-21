@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'Pretendard-Black';
-  src: url('../src/assets/Pretendard-Black.woff') format('woff');
+  font-family: 'Pretendard-Medium';
+  src: url('fonts/Pretendard-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Pretendard-Black', sans-serif;
+  font-family: 'Pretendard-Medium', sans-serif;
 }
 
 button {
-  font-family: 'Pretendard-Black', sans-serif;
+  font-family: 'Pretendard-Medium', sans-serif;
 }
 
 /* id = main 부분 css 추가  */
