@@ -1,25 +1,31 @@
 import './style.css';
-//import { getItem } from './utils/storage';
-
+import Router from './routes/Router';
 import Layout from './components/layouts/Layout';
-import Route from './routes/Route';
+import { getItem } from './utils/storage';
+
 class App {
   constructor() {
     this.layout = new Layout();
-    this.Route = new Route();
-
-    this.render();
+    this.router = new Router(this.layout);
+    this.isAdmin = getItem('admin');
   }
 
-  // getUserRole() {
-  //   return getItem('admin') || '';
-  // }
+  init() {
+    this.layout.render();
+    this.router.init(this.isAdmin);
+    document.addEventListener('click', this.handleNavigation.bind(this));
+  }
 
-  render() {
-    const layoutComponent = new Layout();
-    layoutComponent.render();
-    this.Route.init();
+  handleNavigation(event) {
+    const anchor = event.target.closest('a');
+    if (anchor && anchor.href) {
+      event.preventDefault();
+      this.router.navigate(anchor.href);
+    }
   }
 }
 
-document.addEventListener('DOMContentLoaded', new App());
+document.addEventListener('DOMContentLoaded', () => {
+  const app = new App();
+  app.init();
+});
