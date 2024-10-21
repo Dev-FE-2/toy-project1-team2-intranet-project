@@ -1,16 +1,16 @@
 import { USER_PATH } from '../../utils/constants';
 import './Header.css';
-export default class Header {
+import Container from '../../Container';
+export default class Header extends Container {
   constructor(getUser) {
-    const HEADER_ELEMENT = document.querySelector('.header');
-    this.$header = HEADER_ELEMENT;
+    super('.header-container');
     this.getUser = getUser;
-    this.render();
+    // this.render();
   }
 
   render() {
     if (this.getUser) {
-      this.$header.innerHTML = `
+      this.$container.innerHTML = `
       <div class="header-wapper">
         <div class="header-items">
           <span class="user-name">김아무</span>
@@ -20,7 +20,7 @@ export default class Header {
       </div>
       `;
     } else {
-      this.$header.innerHTML = `
+      this.$container.innerHTML = `
       <div class="header-wapper">
         <div class="header-items">
           <span class="user-name">김아무</span>

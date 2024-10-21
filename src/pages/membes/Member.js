@@ -1,14 +1,13 @@
-export default class MembersPage {
+import Container from '../../Container';
+
+export default class MembersPage extends Container {
   constructor() {
-    const CONTENT = document.getElementById('content');
-    this.content = CONTENT;
-    console.log(this.content);
-    this.render();
+    super('.content');
+    // this.render();
   }
 
   render() {
-    this.content.innerHTML = `
-     
+    this.$container.innerHTML = `
           <div id='members-container'>
             45          
           </div>

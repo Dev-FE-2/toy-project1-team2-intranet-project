@@ -22,7 +22,7 @@ body {
   flex-direction: column; /* 수직 방향으로 정렬 */
 }
 
-#content {
+.content {
   flex: 1; /* 가용 공간을 채우도록 설정 */
   display: flex;
   justify-content: center;

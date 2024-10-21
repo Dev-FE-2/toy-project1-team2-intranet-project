@@ -1,31 +1,35 @@
 import Header from '../headers/Header';
-import Navbar from '../navbars/Navbar';
+import NavBar from '../navbars/Navbar';
+import Container from '../../Container';
+export default class Layout extends Container {
+  constructor() {
+    super('#root');
 
-export default class Layout {
-  constructor(getUserRole) {
-    this.header = new Header();
-    this.navBar = new Navbar();
-    this.getUser = getUserRole;
-    this.render(); // 헤더와 네비게이션 바를 렌더링
+    // this.getUser = getUserRole;
   }
 
+  renderHeader() {
+    this.Header = new Header();
+    this.Header.render();
+  }
+
+  renderNavbar() {
+    this.NavBar = new NavBar();
+    this.NavBar.render();
+  }
   render() {
-    const headerElement = document.getElementsByClassName('.header');
-    const navbarElement = document.getElementsByClassName('.navbar');
-    const contentContainer = document.getElementById('content');
-
-    headerElement.innerHTML = ''; // 기존 헤더 내용 초기화
-    navbarElement.innerHTML = ''; // 기존 네비게이션 바 내용 초기화
-    contentContainer.innerHTML = ''; // 기존 내용 초기화
-
-    this.header.render(); // 헤더 렌더링
-    this.navBar.render(); // 네비게이션 바 렌더링
+    this.$container.innerHTML = `
+      <header class="header-container desktop-only"></header>
+      <nav class="navbar"></nav>
+      <main class="content"></main>
+    `;
+    this.renderHeader();
+    this.renderNavbar();
   }
-
-  setContent(component) {
-    const contentContainer = document.getElementById('content');
-    contentContainer.innerHTML = ''; // 기존 내용을 초기화
-    component.render(); // 새로운 내용을 렌더링
-    contentContainer.appendChild(component.getElement()); // 컴포넌트를 추가
+  setContent(page) {
+    // page.render() 메서드를 호출하여 .content 내부에 페이지 컨텐츠를 삽입
+    const contentContainer = this.$container.querySelector('.content');
+    contentContainer.innerHTML = ''; // 기존 내용을 제거
+    contentContainer.appendChild(page.render()); // 새로운 페이지의 내용을 추가
   }
 }

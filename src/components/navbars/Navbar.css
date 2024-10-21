@@ -42,7 +42,7 @@
   width: 80%;
 }
 
-a.menu-link.active {
+a.active {
   background-color: rgba(205, 225, 248, 0.4);
   border-radius: 10px;
   width: 80%;

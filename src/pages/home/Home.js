@@ -1,13 +1,13 @@
+import Container from '../../Container';
 import '../../style.css'; //css 파일 추가 -수정
-export default class HomePage {
+export default class HomePage extends Container {
   constructor() {
-    const CONTENT = document.getElementById('content');
-    this.content = CONTENT;
+    super('.content');
     this.render();
   }
 
   render() {
-    this.content.innerHTML = /* HTML */ `
+    this.$container.innerHTML = /* HTML */ `
         <div class="my-info desktop-only">
           <div class="wrapper">
             <h2 class="home-subtitle">내 정보</h2>

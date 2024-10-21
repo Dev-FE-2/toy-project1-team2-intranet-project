@@ -1,12 +1,8 @@
-import './style.css';
-//import { getItem } from './utils/storage';
-
 import Layout from './components/layouts/Layout';
-import Route from './routes/Route';
 class App {
   constructor() {
     this.layout = new Layout();
-    this.Route = new Route();
+    // this.route = new Route();
 
     this.render();
   }
@@ -16,9 +12,8 @@ class App {
   // }
 
   render() {
-    const layoutComponent = new Layout();
-    layoutComponent.render();
-    this.Route.init();
+    this.layout.render();
+    // this.route.init();
   }
 }
 
