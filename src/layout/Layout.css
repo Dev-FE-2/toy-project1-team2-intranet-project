@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-medium);
+  height: 100px;
+  padding: var(--space-large);
+  border-bottom: 1px solid var(--color-dark-gray);
+  background-color: var(--color-header-bg); /* 필요에 따라 색상 조정 */
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 100px); /* header를 제외한 나머지 높이 */
+}
+
+.navbar {
+  width: 30%;
+  max-width: 300px;
+  height: 100vh;
+  margin-top: -100px;
+  padding: var(--space-large);
+  border-right: 1px solid var(--color-dark-gray);
+  background-color: var(--color-white);
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  padding: var(--space-large);
+}

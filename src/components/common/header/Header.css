@@ -1,0 +1,22 @@
+.header-items {
+  display: block;
+  font-size: var(--font-medium);
+  text-align: center;
+}
+.user-name {
+  margin-bottom: var(--space-small);
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.logout {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: var(--font-medium);
+}

@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
+  <head>
     <script type="module" src="/@vite/client"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOPAMING</title>
     <script defer type="module" src="./server/signin.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-</head>
-<body>
-    <h1>환영합니다</h1>
-    <form id="signin-form">
-        <input type="email" id="email" placeholder="이메일" required>
-        <input type="password" id="password" placeholder="비밀번호" required>
-        <button type="submit">로그인</button>
-        <a href="../html/signup.html">회원가입</a>
-    </form>
-    <div id="error-message" class="error"></div>
-</body>
+    <script defer type="module" src="./src/App.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

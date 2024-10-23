@@ -1,0 +1,52 @@
+@import './reset.css';
+:root {
+  --color-black: #333333;
+  --color-white: #ffffff;
+
+  /* primary */
+  --color-sky-blue: #cde1f8;
+  --color-blue: #a8d0ff;
+  /* supporting */
+  --color-skyblue-light: #e0faff;
+  --color-coral: #ffb5b5;
+  --color-green: #3bbf0a;
+  --color-green-light: #a2e5be;
+  --color-green-muted: #ccdaaf;
+  --color-caramel: #e4bc84;
+
+  /* Grayscale */
+  --color-dark-gray: #777777;
+  --color-regular-gray: #a0a0a0;
+  --color-light-gray: #d9d9d9;
+  --color-pale-gray: #f4f4f4;
+
+  /* font-size */
+  --font-large: clamp(1.25rem, 1.5vw, 2rem);
+  --font-medium: clamp(0.75rem, 1vw, 1.25rem);
+  --font-small: clamp(0.5rem, 1vw, 0.75rem);
+
+  /* size */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 32px;
+
+  --size-button-small: 50px;
+  --size-button-medium: 100px;
+  --size-button-large: 150px;
+  --size-button-xlarge: 200px;
+  --size-button-jumbo: 250px;
+
+  /* box-shadow */
+  --box-shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow--medium: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-large: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0 auto;
+  color: var(--color-black);
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  font-optical-sizing: auto; /*가변 글꼴에서 글자 더 읽기 쉽게 만듦*/
+  background-color: var(--color-white);
+}

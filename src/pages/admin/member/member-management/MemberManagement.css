@@ -1,0 +1,139 @@
+.user-container {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  left: 50px;
+}
+
+.user-top {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+
+.user-update {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type='text'] {
+  height: 42px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  outline: none;
+  padding-left: 10px;
+}
+
+select {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.user-section {
+  background-color: #f4f4f4;
+  width: 90%;
+  height: 600px;
+  margin-top: 17px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.user-item {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  height: 60px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid black;
+  height: 40px;
+  justify-content: center;
+  width: 250px;
+}
+
+.user-item .user-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: tomato;
+  margin-left: 20px;
+}
+
+.circle1 {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #3bbf0a;
+  margin-left: 20px;
+}
+
+.user-item .user-list:nth-child(3) {
+  border: none;
+  padding: 0;
+}
+
+.user-item .user-list:last-child {
+  border: none;
+  padding: 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #313131;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* 체크된 상태의 스타일 */
+input[type='checkbox']:checked + .custom-checkbox {
+  background-color: rgba(0, 26, 114, 0.4);
+}
+
+/* 체크된 상태의 표시 */
+input[type='checkbox']:checked + .custom-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
