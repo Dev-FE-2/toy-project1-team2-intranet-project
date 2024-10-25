@@ -1,102 +1,70 @@
-@import '../../../styles/global.css';
-
-/* 레이아웃 */
-.profile-panel {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 0;
+.user-profileImg-container {
+  position: relative;
+  width: 100%;
 }
 
-.profile-picture {
+.user-profileImg-container .profileImg-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 0;
-}
-
-.outside-box {
-  height: calc(var(--space-large) * 14);
-  background-color: var(--color-light-gray);
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
   padding: var(--space-large);
-  border-radius: 10px;
-  margin-top: 0px;
-  margin-left: calc(var(--space-medium) * 2);
+  border-radius: var(--base-border-radius);
+  background-color: var(--color-regular-gray);
+  overflow: hidden;
 }
 
-.inside-box {
+.user-profileImg-container .user-profileImg-button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: var(--space-medium);
+}
+.user-profileImg-container .img-upload-btn,
+.user-profileImg-container .img-delete-btn {
+  flex: 1;
+  flex-basis: 0;
+  flex-basis: 0;
+  width: 100%;
 }
 
-.profile-box {
-  width: calc(var(--space-large) * 10);
-  height: calc(var(--space-large) * 20);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.user-profileImg-container .profileImg-box .real-profileImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute; /* 상위 요소 기준 배치 */
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.inside-circle {
-  width: calc(var(--space-large) * 9);
-  height: calc(var(--space-large) * 9);
-  background-color: var(--color-white);
-  border-radius: 50%; /* 타원형을 만들기 위한 설정 */
+.user-profileImg-container .profileImg-box .inside-circle {
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0; /* 여백 제거 */
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 /* Upload Your Profile  */
-.circle-text {
-  width: calc(var(--space-large) * 5); /* 너비 계산 */
-  margin: var(--space-small) 0; /* 여백 설정 */
-  letter-spacing: 2px; /* 글자 간격 설정 */
-  font-size: var(--font-large); /* 변수 사용 */
-}
-
-/* 프로필 이미지를 업로드 해주세요! 부분 */
-.profile-description {
-  font-size: var(--font-medium);
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
-  margin-top: var(--space-large);
-  width: calc(var(--space-large) * 15);
-  margin-bottom: var(--space-small);
+.user-profileImg-container .profileImg-box .inside-circle .circle-text {
+  line-height: 1.5;
+  font-size: var(--font-large);
 }
 
 /* (단, jpg/png/jpeg 확장자 파일만 적용됩니다.) */
-.profile-description-constraint {
-  margin: var(--space-small);
-  width: calc(var(--space-large) * 20);
-  height: auto;
-  font-size: calc(var(--font-small) * 1.4) !important;
-  text-align: center;
+.user-profileImg-container .profileImg-box .profile-description-constraint {
+  margin-top: -0.5rem;
+  font-size: var(--font-small);
 }
 
-/* 이미지 파일 선택 버튼 */
-.picture-button {
-  width: calc(var(--size-button-xlarge) * 1.8);
-  height: calc(var(--space-medium) * 3);
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 10px;
-  font-size: var(--font-medium);
-  cursor: pointer;
-  margin: 0; /* 여백 제거 */
-  margin-left: calc(var(--space-medium) * 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: var(--space-small);
-}
-
-#fileInput {
+.user-profileImg-container #fileInput {
   display: none; /* 파일 입력 숨김 */
 }

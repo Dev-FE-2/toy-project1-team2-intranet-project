@@ -52,6 +52,7 @@
 
 .member-info {
   flex: 1;
+  flex-basis: 0;
   align-items: center;
   display: grid;
   grid-template-columns: 60px 60px 80px 100px 220px 150px;

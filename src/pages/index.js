@@ -9,6 +9,7 @@ export { RenderUserHome } from './user/home/Home';
 export { RenderUserEditProfile } from './user/edit-profile/EditProfile';
 export { RenderUserWorkDetail } from './user/work-detail/WorkDetail';
 export { RenderUserVacationManagement } from './user/vacation/vacation-management/VacationManagement';
+export { RenderUserVacationRequest } from './user/vacation/vacation-request/VacationRequest';
 export { RenderUserNoticeList } from './user/notice/notice-list/NoticeList';
 export { RenderUserNoticeDetail } from './user/notice/notice-detail/NoticeDetail';
 export { RenderUserPeer } from './user/peer/Peer';

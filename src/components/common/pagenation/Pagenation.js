@@ -8,13 +8,11 @@ export const Pagenation = (
   currentPage,
   onPageChange,
 ) => {
-  console.log(totalItems);
   const totalPages =
     Math.ceil(totalItems / itemsPerPage) === 0
       ? 1
       : Math.ceil(totalItems / itemsPerPage);
   const paginationContainer = document.createElement('div');
-  console.log(totalPages);
   for (let i = 1; i <= totalPages; i++) {
     const paginationButton = Button({
       width: 50,
@@ -39,6 +37,5 @@ export const Pagenation = (
 
     paginationContainer.appendChild(paginationButton);
   }
-  console.log(paginationContainer);
   return paginationContainer; // HTML 요소를 반환
 };

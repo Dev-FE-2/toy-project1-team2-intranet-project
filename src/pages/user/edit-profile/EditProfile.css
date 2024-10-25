@@ -1,65 +1,47 @@
-@import '../../../styles/global.css';
-
-/* 레이아웃 */
-.box-title {
-  margin-left: calc(var(--space-medium) * 5);
-  width: auto;
-}
-
-.edit-title {
-  font-size: var(--font-large);
-}
-
-.edit-box {
-  display: flex;
-  flex-direction: column;
+.user-edit-title {
   width: 100%;
-  max-width: 1400px !important;
-  max-width: calc(var(--space--large) * 1);
-  height: calc(var(--space--large) * 13);
-  margin: var(--space-medium) auto;
-  margin-bottom: 0;
-  background-color: var(--color-pale-gray);
+  font-weight: 700;
+  margin-bottom: var(--space-medium);
+}
+
+.user-edit-form-container {
+  width: 100%;
   padding: var(--space-large);
-}
-
-.profile-and-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: var(--space-large);
-}
-
-/* 버튼 뒷 공간 */
-.button-space {
-  width: 1400px;
-  height: calc(var(--space-large) * 2);
+  border-radius: var(--base-border-radius);
   background-color: var(--color-pale-gray);
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  margin-left: calc(var(--space-large) * 0.2);
 }
 
-.button-wrapper {
+.user-edit-form {
   display: flex;
-  justify-content: center;
+  gap: 2rem;
+}
+
+.user-edit-form .user-edit-profileImg {
+  flex: 4;
+  flex-basis: 0;
+}
+
+.user-edit-form .user-edit-profile {
+  flex: 6;
+  flex-basis: 0;
+}
+
+.user-edit-form-container .edit-submit-btn {
   width: 100%;
-  margin-top: calc(var(--space-large) * 2);
+  margin-top: var(--space-medium);
 }
 
-.submit-button {
-  padding: var(--space-small) var(--space-medium);
-  font-size: var(--font-medium);
-  background-color: #e0faff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: calc(var(--size-button-jumbo) * 4.5);
-  max-width: calc(var(--size-button-jumbo) * 5);
-  margin-bottom: calc(var(--space-large) * 3);
+@media (width<=1200px) {
+  .user-edit-form-container {
+    padding: var(--space-large) var(--space-xlarge);
+  }
+  .user-edit-form {
+    flex-direction: column;
+  }
 }
 
-.submit-button:hover {
-  background-color: var(--color-blue); /* 변수 사용 */
+@media (width <= 1000px) {
+  .user-edit-form-container {
+    padding: var(--space-xsmall) var(--space-small);
+  }
 }

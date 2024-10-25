@@ -1,42 +1,66 @@
-// ProfileImage.js
 import './ProfileImage.css';
+import { Button } from '../../../components';
+import {
+  deleteProfileImage,
+  uploadProfileImg,
+} from '../../../utils/handleProfileImg';
 
 export const ProfileImage = () => {
   return `
-    <section class="profile-panel">
-      <div class="profile-picture">
-        <div class="outside-box">
-          <div class="inside-box">
-            <div class="profile-box">
-              <div class="inside-circle" id="profileImage">
-                <span class="circle-text">Upload</span>
-                <span class="circle-text">Your</span>
-                <span class="circle-text">Profile</span>
-              </div>
-              <p class="profile-description">
-                프로필 이미지를 업로드 해주세요!
-              </p>
-              <p class="profile-description-constraint">
-                (단, jpg/png/jpeg 확장자 파일만 적용됩니다.)
-              </p>
-            </div>
-          </div>
+    <section class="user-profileImg-container">
+       <div class="profileImg-box">
+        <div class="real-profileImg"></div>
+        <div class="inside-circle" id="profileImage">
+          <span class="circle-text">Upload</span>
+          <span class="circle-text">Your</span>
+          <span class="circle-text">Profile</span>
         </div>
-        <button class="picture-button" id="uploadButton">사진 선택하기</button>
-        <input type="file" id="fileInput" accept="image/jpeg, image/png"/>
+        <p class="profile-description">
+          프로필 이미지를 업로드 해주세요!
+        </p>
+        <p class="profile-description-constraint">
+          (단, jpg/png/jpeg 확장자 파일만 적용됩니다.)
+        </p>
       </div>
+      <div class="user-profileImg-button-container">
+      <input type="file" id="fileInput" accept="image/jpeg, image/png"/>
     </section>
   `;
 };
 
 export const attachProfileImageEvents = container => {
-  const pictureButton = container.querySelector('#uploadButton');
   const fileInput = container.querySelector('#fileInput');
-  const profileImageCircle = container.querySelector('#profileImage'); // 이미지가 들어갈 요소 선택
-  const description = container.querySelector('.profile-description'); // 설명 텍스트 선택
-  const descriptionConstraint = container.querySelector(
-    '.profile-description-constraint',
-  ); // 제약 조건 텍스트 선택
+  const profileImgPosition = container.querySelector('.real-profileImg');
+  const buttonPosition = container.querySelector(
+    '.user-profileImg-button-container',
+  ); // 업로드 버튼 선택
+
+  const imgUploadBtn = Button({
+    className: 'img-upload-btn',
+    text: '사진 선택하기',
+    color: 'transparent',
+    shape: 'line',
+    padding: 'var(--space-small)',
+    onClick: e => {
+      e.preventDefault();
+      fileInput.click();
+    },
+  });
+  const imgDeleteBtn = Button({
+    className: 'img-delete-btn',
+    text: '기본 이미지로 변경',
+    color: 'white',
+    shape: 'line',
+    padding: 'var(--space-small)',
+    onClick: e => {
+      e.preventDefault();
+      // 프로필 사진 삭제
+      deleteProfileImage(profileImgPosition);
+    },
+  });
+
+  buttonPosition.append(imgUploadBtn);
+  buttonPosition.append(imgDeleteBtn);
 
   // Change event 리스너를 설정
   fileInput.addEventListener('change', () => {
@@ -47,24 +71,9 @@ export const attachProfileImageEvents = container => {
 
       // 파일 읽기가 완료되었을 때 실행되는 이벤트
       reader.onload = event => {
-        // 선택된 파일의 데이터 URL을 사용하여 배경 이미지로 설정
-        profileImageCircle.style.backgroundImage = `url(${event.target.result})`;
-        profileImageCircle.style.backgroundSize = 'cover'; // 배경 이미지 크기 설정
-        profileImageCircle.style.backgroundPosition = 'center'; // 배경 이미지 위치 설정
-
-        // 기존 텍스트 지우기
-        const circleTexts = profileImageCircle.querySelectorAll('.circle-text');
-        circleTexts.forEach(text => {
-          text.style.display = 'none'; // 텍스트를 숨김
-        });
-
-        // 설명 텍스트 변경
-        if (description) {
-          description.textContent = '사진이 선택되었습니다'; // 텍스트 변경
-        }
-        if (descriptionConstraint) {
-          descriptionConstraint.style.display = 'none'; // 제약 조건 텍스트 숨김
-        }
+        // 선택된 파일의 데이터 URL을 로컬 스토리지에 저장, 사용
+        // 프로필 사진 삭제 수정 && 업로드
+        uploadProfileImg(profileImgPosition, event.target.result);
       };
 
       // 파일 읽기 시작
@@ -72,11 +81,5 @@ export const attachProfileImageEvents = container => {
     } else {
       alert('파일을 선택해 주세요.');
     }
-  });
-
-  pictureButton.addEventListener('click', event => {
-    console.log('클릭'); // 클릭 로그 출력
-    event.preventDefault(); // 기본 폼 제출 방지
-    fileInput.click(); // 파일 선택 대화상자 열기
   });
 };

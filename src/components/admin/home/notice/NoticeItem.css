@@ -19,6 +19,7 @@
 .notice-content {
   padding: var(--space-small);
   flex: 1;
+  flex-basis: 0;
 }
 
 .notice-title {

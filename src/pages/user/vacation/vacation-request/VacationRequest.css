@@ -1,0 +1,89 @@
+.vacation-request-title {
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: var(--space-medium);
+}
+
+.vacation-request-form {
+  width: 100%;
+  padding: var(--space-large);
+  border-radius: var(--base-border-radius);
+  background-color: var(--color-pale-gray);
+}
+
+.vacation-request-form .vacation-request-submit-btn {
+  width: 100%;
+  margin-top: var(--space-medium);
+}
+
+.vacation-request-form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.35rem;
+  width: 100%;
+}
+
+.vacation-request-form-inputs .input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem; /* 최소 공백*/
+}
+
+.vacation-request-form-inputs .input-box .vacation-input {
+  flex: 2;
+  flex-basis: 0;
+}
+
+.vacation-request-form-inputs .input-box .input-field,
+.vacation-request-form-inputs .input-box .input-select {
+  flex: 8;
+  flex-basis: 0;
+  width: 100%;
+  height: 40px;
+  padding: var(--space-small);
+  border: 1.5px solid var(--color-light-gray);
+  border-radius: var(--base-border-radius);
+  outline: none;
+  background-color: var(--color-white);
+  transition: border-color 0.3s;
+}
+
+.vacation-request-form-inputs .input-box .input-field:hover,
+.vacation-request-form-inputs .input-box .input-select:hover {
+  border: 1.5px solid var(--color-regular-gray);
+}
+
+.vacation-request-form-inputs #vacation-content {
+  line-height: 1.2;
+}
+
+.vacation-request-form-inputs .input-box .proof-file-preview {
+  flex: 8;
+  width: 100%;
+  text-align: center;
+}
+
+.vacation-request-form-inputs .input-box .proof-file-preview .file-title {
+  text-decoration: underline;
+  color: var(--color-dark-gray);
+  cursor: pointer;
+}
+
+.vacation-request-form-inputs #fileInput {
+  display: none; /* 파일 입력 숨김 */
+}
+
+@media (width<=1200px) {
+  .vacation-request-form {
+    padding: var(--space-large) var(--space-xlarge);
+    flex-direction: column;
+  }
+}
+
+@media (width <= 1000px) {
+  .vacation-request-form {
+    padding: var(--space-small);
+  }
+}

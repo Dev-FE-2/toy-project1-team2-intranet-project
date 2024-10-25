@@ -1,8 +1,7 @@
-@import '../../../styles/global.css';
-
 .peer-title {
   font-size: var(--font-large);
   flex: 1; /* 제목이 가능한 공간을 차지하도록 설정 */
+  flex-basis: 0;
 }
 
 .search-bar {

@@ -3,7 +3,7 @@
   font-size: var(--font-medium);
   text-align: center;
 }
-.user-name {
+.header-items .user-name {
   margin-bottom: var(--space-small);
 }
 
@@ -11,14 +11,9 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: url('/assets/imgs/profile/profile_null.jpg') no-repeat center;
-  background-size: contain;
-}
-
-.logoutBtn {
-  padding: var(--space-small);
-  border-radius: 5px;
-  font-size: var(--font-medium);
+  overflow: hidden;
+  background: url('/assets/imgs/profile/profile_null.jpg') no-repeat center; /* 기본 값 넣어둠 */
+  background-size: cover;
 }
 
 .profile-circle a.hidden-link {
@@ -26,6 +21,7 @@
   opacity: 0;
   width: 80px;
   height: 80px;
+  z-index: 1;
   /* background-color: black;  */
 }
 
