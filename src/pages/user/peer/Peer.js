@@ -44,9 +44,9 @@ export const RenderUserPeer = async container => {
   const jsonFilePath = '../../server/data/users.json';
 
   // 사용자 데이터 가져오기
-  const fetchUserData = async jsonFilePath => {
+  const fetchUserData = async () => {
     try {
-      const response = await axios.get(jsonFilePath);
+      const response = await axios.get('../../server/data/users.json');
       users = response.data;
       filteredUsers = users;
 
@@ -70,7 +70,7 @@ export const RenderUserPeer = async container => {
   };
 
   // 사용자 데이터 가져오기 후 검색 기능 설정
-  await fetchUserData(jsonFilePath);
+  await fetchUserData();
 
   // 검색 기능 설정
   setupSearch(

@@ -20,21 +20,21 @@ export const RenderUserNoticeList = async container => {
       return filteredPosts
         .map(
           post => `
-          <div class="notice-item-container" id="notice-${post.post_id}" post-id="${post.post_id}"></div> 
+          <div class="user-notice-item-container" id="notice-${post.post_id}" post-id="${post.post_id}"></div> 
         `,
         )
         .join('');
     };
 
     container.innerHTML = `
-      <header class="notice-header">
-        <div class="explain"><span class="strong">${bcName}</span>의 공지목록입니다.</div> 
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Search"/>
+      <header class="user-notice-list-header">
+        <div class="user-notice-title"><span class="strong">${bcName}</span>의 공지목록입니다.</div> 
+        <div class="user-notice-search">
+          <input type="text" class="user-notice-search-input" placeholder="Search"/>
           <span class="material-symbols-rounded">search</span> 
         </div>
       </header>
-      <div class="notice-list">
+      <div class="user-notice-list">
         ${renderNoticeItems(posts)}
       </div>
     `;
@@ -42,7 +42,9 @@ export const RenderUserNoticeList = async container => {
     //notice-item-container클릭시 notice-detail 페이지로 이동하게 함
     //모든 notice-item-container에 클릭 이벤트 핸들러 연결함
     const attachClickHandlersToNotices = () => {
-      const noticeItems = document.querySelectorAll('.notice-item-container');
+      const noticeItems = document.querySelectorAll(
+        '.user-notice-item-container',
+      );
       noticeItems.forEach(item => {
         item.addEventListener('click', () => {
           const postId = item.getAttribute('post-id');
@@ -53,11 +55,11 @@ export const RenderUserNoticeList = async container => {
 
     // 필터링 결과에 따라 DOM 업데이트할 함수
     const updateNotices = filteredPosts => {
-      const noticeList = document.querySelector('.notice-list');
+      const noticeList = document.querySelector('.user-notice-list');
       if (filteredPosts.length === 0) {
         //검색 결과 없으면
         noticeList.innerHTML = `
-         <div class="notice-filter-error-message">찾으시는 결과가 없습니다.</div>
+         <div class="user-notice-filter-error-message">찾으시는 결과가 없습니다.</div>
         `;
       } else {
         noticeList.innerHTML = renderNoticeItems(filteredPosts);
@@ -75,7 +77,7 @@ export const RenderUserNoticeList = async container => {
     };
 
     // 검색 함수
-    const searchInput = document.querySelector('.search-input');
+    const searchInput = document.querySelector('.user-notice-search-input');
     searchInput.addEventListener('input', e => {
       const searchTerm = e.target.value.toLowerCase(); //소문자로 맞춰서 검색할 거임
       const filteredPosts = posts.filter(post => {

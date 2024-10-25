@@ -27,6 +27,8 @@ export const USER_PATH = {
   NOTICE: '/notice',
   PEER: '/peer',
   COURSE: '/course',
+  //부재 신청 페이지 추가
+  VACATIONREQUSET: '/vacation/request',
 };
 
 export const USER_TITLE = {
