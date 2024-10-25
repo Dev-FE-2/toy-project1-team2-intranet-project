@@ -8,7 +8,8 @@
     "abs_proof_document": "firbasestorage/document/sick_leave_proof.jpg",
     "abs_created_at": "2024-10-21",
     "abs_start_date": "2024-11-01",
-    "abs_end_date": "2024-11-02"
+    "abs_end_date": "2024-11-02",
+    "abs_status": "대기"
   },
   {
     "user_id": "231231232",
@@ -19,7 +20,8 @@
     "abs_proof_document": "firbasestorage/document/family_event_proof.pdf",
     "abs_created_at": "2024-10-22",
     "abs_start_date": "2024-11-05",
-    "abs_end_date": "2024-11-05"
+    "abs_end_date": "2024-11-05",
+    "abs_status": "대기"
   },
   {
     "user_id": "231231233",
@@ -30,7 +32,8 @@
     "abs_proof_document": "firbasestorage/document/vacation_proof.jpg",
     "abs_created_at": "2024-10-23",
     "abs_start_date": "2024-11-10",
-    "abs_end_date": "2024-11-15"
+    "abs_end_date": "2024-11-15",
+    "abs_status": "대기"
   },
   {
     "user_id": "231231234",
@@ -41,7 +44,8 @@
     "abs_proof_document": "firbasestorage/document/dental_proof.jpg",
     "abs_created_at": "2024-10-24",
     "abs_start_date": "2024-11-03",
-    "abs_end_date": "2024-11-03"
+    "abs_end_date": "2024-11-03",
+    "abs_status": "대기"
   },
   {
     "user_id": "231231235",
@@ -52,7 +56,8 @@
     "abs_proof_document": "firbasestorage/document/wedding_invitation.jpg",
     "abs_created_at": "2024-10-25",
     "abs_start_date": "2024-11-08",
-    "abs_end_date": "2024-11-08"
+    "abs_end_date": "2024-11-08",
+    "abs_status": "대기"
   },
   {
     "user_id": "231231236",
@@ -63,7 +68,8 @@
     "abs_proof_document": "firbasestorage/document/vacation_request.pdf",
     "abs_created_at": "2024-10-26",
     "abs_start_date": "2024-11-12",
-    "abs_end_date": "2024-11-18"
+    "abs_end_date": "2024-11-18",
+    "abs_status": "거부"
   },
   {
     "user_id": "231231237",
@@ -74,7 +80,8 @@
     "abs_proof_document": "firbasestorage/document/allergy_proof.jpg",
     "abs_created_at": "2024-10-27",
     "abs_start_date": "2024-11-02",
-    "abs_end_date": "2024-11-02"
+    "abs_end_date": "2024-11-02",
+    "abs_status": "거부"
   },
   {
     "user_id": "231231238",
@@ -85,7 +92,8 @@
     "abs_proof_document": "firbasestorage/document/school_event_proof.pdf",
     "abs_created_at": "2024-10-28",
     "abs_start_date": "2024-11-06",
-    "abs_end_date": "2024-11-06"
+    "abs_end_date": "2024-11-06",
+    "abs_status": "거부"
   },
   {
     "user_id": "231231239",
@@ -96,7 +104,8 @@
     "abs_proof_document": "firbasestorage/document/family_trip_proof.jpg",
     "abs_created_at": "2024-10-29",
     "abs_start_date": "2024-11-09",
-    "abs_end_date": "2024-11-13"
+    "abs_end_date": "2024-11-13",
+    "abs_status": "거부"
   },
   {
     "user_id": "231231240",
@@ -107,7 +116,8 @@
     "abs_proof_document": "firbasestorage/document/food_poisoning_proof.jpg",
     "abs_created_at": "2024-10-30",
     "abs_start_date": "2024-11-04",
-    "abs_end_date": "2024-11-05"
+    "abs_end_date": "2024-11-05",
+    "abs_status": "거부"
   },
   {
     "user_id": "231231241",
@@ -118,7 +128,8 @@
     "abs_proof_document": "firbasestorage/document/friend_wedding_invitation.jpg",
     "abs_created_at": "2024-10-31",
     "abs_start_date": "2024-11-07",
-    "abs_end_date": "2024-11-07"
+    "abs_end_date": "2024-11-07",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231242",
@@ -129,7 +140,8 @@
     "abs_proof_document": "firbasestorage/document/travel_preparation_proof.jpg",
     "abs_created_at": "2024-11-01",
     "abs_start_date": "2024-11-15",
-    "abs_end_date": "2024-11-15"
+    "abs_end_date": "2024-11-15",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231243",
@@ -140,7 +152,8 @@
     "abs_proof_document": "firbasestorage/document/headache_proof.jpg",
     "abs_created_at": "2024-11-02",
     "abs_start_date": "2024-11-02",
-    "abs_end_date": "2024-11-02"
+    "abs_end_date": "2024-11-02",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231244",
@@ -151,7 +164,8 @@
     "abs_proof_document": "firbasestorage/document/parent_hospital_proof.jpg",
     "abs_created_at": "2024-11-01",
     "abs_start_date": "2024-11-03",
-    "abs_end_date": "2024-11-03"
+    "abs_end_date": "2024-11-03",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231245",
@@ -162,7 +176,8 @@
     "abs_proof_document": "firbasestorage/document/friend_visit_proof.jpg",
     "abs_created_at": "2024-11-02",
     "abs_start_date": "2024-11-20",
-    "abs_end_date": "2024-11-22"
+    "abs_end_date": "2024-11-22",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231246",
@@ -173,7 +188,8 @@
     "abs_proof_document": "firbasestorage/document/fatigue_proof.jpg",
     "abs_created_at": "2024-11-03",
     "abs_start_date": "2024-11-05",
-    "abs_end_date": "2024-11-05"
+    "abs_end_date": "2024-11-05",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231247",
@@ -184,7 +200,8 @@
     "abs_proof_document": "firbasestorage/document/interview_proof.pdf",
     "abs_created_at": "2024-11-04",
     "abs_start_date": "2024-11-25",
-    "abs_end_date": "2024-11-25"
+    "abs_end_date": "2024-11-25",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231248",
@@ -195,7 +212,8 @@
     "abs_proof_document": "firbasestorage/document/family_gathering_proof.jpg",
     "abs_created_at": "2024-11-05",
     "abs_start_date": "2024-11-30",
-    "abs_end_date": "2024-12-01"
+    "abs_end_date": "2024-12-01",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231249",
@@ -206,7 +224,8 @@
     "abs_proof_document": "firbasestorage/document/constipation_proof.jpg",
     "abs_created_at": "2024-11-06",
     "abs_start_date": "2024-11-06",
-    "abs_end_date": "2024-11-06"
+    "abs_end_date": "2024-11-06",
+    "abs_status": "승인"
   },
   {
     "user_id": "231231250",
@@ -217,6 +236,7 @@
     "abs_proof_document": "firbasestorage/document/community_service_proof.jpg",
     "abs_created_at": "2024-11-07",
     "abs_start_date": "2024-11-12",
-    "abs_end_date": "2024-11-12"
+    "abs_end_date": "2024-11-12",
+    "abs_status": "승인"
   }
 ]

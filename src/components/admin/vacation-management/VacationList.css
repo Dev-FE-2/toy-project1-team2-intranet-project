@@ -1,0 +1,212 @@
+.admin-vacation-list-section {
+  background: var(--color-pale-gray);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.admin-vacation-list {
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 700px;
+}
+
+.admin-vacation-status-dot {
+  margin-left: var(--space-medium);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.admin-vacation-status-dot.active {
+  background-color: var(--color-green);
+  box-shadow:
+    0 0 4px 2px rgba(76, 175, 80, 0.4),
+    0 0 8px 4px rgba(76, 175, 80, 0.2);
+  filter: blur(1px);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.admin-vacation-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-pale-gray);
+  object-fit: cover;
+}
+
+.admin-vacation-info {
+  flex: 1;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 40px 60px 60px 60px 100px 150px 150px 80px;
+  gap: var(--space-small);
+}
+
+.admin-vacation-info span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-vacation-status {
+  padding: var(--space-xsmall) var(--space-small);
+  border-radius: var(--space-small);
+  text-align: center;
+}
+
+.status-승인 {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.status-대기 {
+  background-color: var(--color-light-gray);
+  color: var(--color-black);
+}
+
+.status-거부 {
+  background-color: #c85159;
+  color: var(--color-white);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--space-medium);
+  color: #6c6c6c;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  color: #f44336;
+}
+
+/* detail 컨텐츠 */
+.detail-content {
+  padding: var(--space-medium);
+}
+
+.detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+}
+
+.detail-item {
+  display: flex;
+  gap: var(--space-large);
+  align-items: center;
+}
+
+.detail-label {
+  min-width: 60px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.detail-value {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.date {
+  color: #130640;
+  font-weight: 500;
+}
+
+.date-separator {
+  margin: 0 var(--space-xsmall);
+}
+
+.detail-content-box {
+  align-items: flex-start;
+}
+
+.content-box {
+  background: var(--color-pale-gray);
+  padding: var(--space-medium);
+  border-radius: var(--space-small);
+  line-height: 1.5;
+  min-height: 80px;
+}
+
+/* 다운로드 파일 */
+.download-file {
+  display: flex;
+  align-items: center;
+  gap: var(--space-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.approval-button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-small);
+  margin-top: var(--space-medium);
+}
+
+.approval-button {
+  padding: var(--space-small) var(--space-large);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1200px) {
+  .admin-vacation-info {
+    grid-template-columns: 40px 60px 60px 60px 100px 150px 80px;
+  }
+  .admin-vacation-create-date {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .admin-vacation-info {
+    grid-template-columns: 40px 60px 60px 60px 100px 80px;
+  }
+  .admin-vacation-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-vacation-info {
+    grid-template-columns: 40px 60px 60px 60px 80px;
+  }
+  .admin-vacation-avatar {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-vacation-info {
+    grid-template-columns: 40px 60px 60px 60px;
+    gap: var(--space-xsmall);
+    font-size: 0.9rem;
+    padding: var(--space-xsmall);
+  }
+  .admin-vacation-abs-type {
+    display: none;
+  }
+  .detail-item {
+    flex-direction: column;
+    gap: var(--space-small);
+    align-items: flex-start;
+  }
+  .detail-label {
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+  .detail-value {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  .content-box {
+    padding: var(--space-small);
+    min-height: 60px;
+  }
+}

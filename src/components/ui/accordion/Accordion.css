@@ -1,0 +1,61 @@
+.accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  background: var(--color-white);
+  border-radius: var(--space-small);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.accordion-detail {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  padding: 0 var(--space-medium);
+}
+
+.accordion-header {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-button > .material-symbols-rounded {
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0deg);
+  border-radius: 50%;
+}
+
+.accordion-button:hover > .material-symbols-rounded {
+  background: var(--color-skyblue);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+/* 열린 상태일 때 180도 회전 */
+.accordion-item.open .accordion-button > .material-symbols-rounded {
+  transform: rotate(180deg);
+}
+
+/* 닫힌 상태일 때 0도 회전 */
+.accordion-item:not(.open) .accordion-button > .material-symbols-rounded {
+  transform: rotate(0deg);
+}
